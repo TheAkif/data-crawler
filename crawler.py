@@ -70,5 +70,8 @@ for index, row in df.iterrows():
     # Concatenate the temporary DataFrame with the results DataFrame
     results_df = pd.concat([results_df, temp_df], ignore_index=True)
 
+# Export the data to a CSV file
+results_df.to_csv('business_results.csv', index=False)
+
 # Print the results
 print(results_df)
